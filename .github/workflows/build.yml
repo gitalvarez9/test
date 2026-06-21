@@ -1,5 +1,3 @@
-
-
 name: sidou
 on: workflow_dispatch
 permissions:
@@ -10,9 +8,9 @@ jobs:
     steps:
       -uses: actions/checkout@v5
       -name: file generate
-      run: date "+last build:%d/%m/%Y %H:%M UTC " >latsbuild.txt
+       run: date "+last build:%d/%m/%Y %H:%M UTC " >latsbuild.txt
       -name: Commit & push
-      run:|
+       run:|
 git config user.name "github_action{BOT}"
 git config user.email "github-action{BOT}@user.noreply@github.com"
 git add lastbuild.txt
